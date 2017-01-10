@@ -1,0 +1,54 @@
+# Tournament-Database
+
+A Python module that uses the PostgreSQL database to keep track of players and matches in a game tournament.
+
+The game tournament will use the Swiss system for pairing up players in each round: players are not eliminated, and each player should be paired with another player with the same number of wins, or as close as possible.
+
+
+# Files 
+
+## tournament.sql
+
+A database schema to store game matches between players.
+
+## tournament.py
+
+Contains a Python module to rank the players and pair them up in matches in a tournament.
+
+## tournament_test.py
+
+Unit tests to test the functions written in tournament.py.
+
+# Instructions
+
+Download the folder
+
+Create a PostgreSQL database called tounament. ( CREATE DATABASE tournament )
+
+Run the tournament.sql file to create the necessary database tables
+
+Import tournament.py into your Python code in order to use the following functions to record results and produce pairings for a Swiss style tournament.
+
+connect():
+    """Connect to the PostgreSQL database.  Returns a database connection."""
+
+deleteMatches():
+    """Remove all the match records from the database."""
+
+deletePlayers():
+    """Remove all the player records from the database."""
+
+countPlayers():
+    """Returns the number of players currently registered."""
+
+registerPlayer(name):
+    """Adds a player to the tournament database.
+
+playerStandings():
+    """Returns a list of the players and their win records, sorted by wins.
+
+reportMatch(winner, loser):
+    """Records the outcome of a single match between two players.
+
+swissPairings():
+    """Returns a list of pairs of players for the next round of a match.
